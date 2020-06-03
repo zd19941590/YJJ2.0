@@ -1,0 +1,8 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey"></string>
+
+    <string name="app_name">我就是这么屌</string> 
+    <string name="alert_dialog_title">温馨提示</string>
+    <string name="button_cancel">取消</string>
+    <string name="msg_default_status">请将镜头对准条码，距离手机10cm左右，软件将自动读取数据！</string>
+</resources>

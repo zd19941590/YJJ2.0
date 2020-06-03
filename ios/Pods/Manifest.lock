@@ -1,0 +1,58 @@
+PODS:
+  - AFPhotoBrowser (0.0.6):
+    - DACircularProgress
+    - MBProgressHUD
+    - SDWebImage
+  - Bugly (2.5.0)
+  - DACircularProgress (2.3.1)
+  - IQKeyboardManager (3.3.7)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - UMCAnalytics (5.5.0):
+    - UMCCommon
+  - UMCCommon (1.5.2)
+  - UMCSecurityPlugins (1.0.6)
+
+DEPENDENCIES:
+  - AFPhotoBrowser (= 0.0.6)
+  - Bugly
+  - DACircularProgress
+  - IQKeyboardManager (= 3.3.7)
+  - Masonry
+  - MBProgressHUD
+  - SDWebImage
+  - UMCAnalytics
+  - UMCCommon
+  - UMCSecurityPlugins
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFPhotoBrowser
+    - Bugly
+    - DACircularProgress
+    - IQKeyboardManager
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+    - UMCAnalytics
+    - UMCCommon
+    - UMCSecurityPlugins
+
+SPEC CHECKSUMS:
+  AFPhotoBrowser: 9a590cc48101b6f3b00773ccbcdc1339c3706bc8
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  UMCAnalytics: 4667788559a72f2fa5077117d1b8802a3b6eb6bb
+  UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+
+PODFILE CHECKSUM: f84cb9c44665b59a93ab763e4e17f3b0af061706
+
+COCOAPODS: 1.5.0

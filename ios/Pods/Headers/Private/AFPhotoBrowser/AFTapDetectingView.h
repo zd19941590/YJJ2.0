@@ -1,0 +1,1 @@
+../../../AFPhotoBrowser/Pod/Classes/AFTapDetectingView.h
