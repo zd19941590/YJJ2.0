@@ -638,9 +638,24 @@ export class ProductList extends Component {
   render() {
     let productList = null
     let self = this
+    let isDefList = [];
+    let NonDefList = [];
+    let NewproductList = [];
     productList = this.getData();
     if (productList.length > 0) {
-       productList.sort((a,b) => b.priority-a.priority)
+      debugger;
+      productList.forEach(i =>{
+        if(i.DefaultImage !=""){
+          NewproductList.push(i)
+          NewproductList.sort((a,b) => b.priority-a.priority)
+        }else
+        {
+          NonDefList.push(i);
+          NonDefList.sort((a,b) => b.priority-a.priority);
+        }
+      })
+      productList = null;
+      productList = NewproductList.concat(NonDefList);
        productList.forEach(a => {
          a.CommonProductList.sort((c,d) => d.Priority-c.Priority)
          let tag = true;
