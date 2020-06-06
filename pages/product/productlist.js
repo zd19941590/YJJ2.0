@@ -658,24 +658,25 @@ export class ProductList extends Component {
       productList = NewproductList.concat(NonDefList);
        productList.forEach(a => {
          a.CommonProductList.sort((c,d) => d.Priority-c.Priority)
-         let tag = true;
-         for(let i=0;i<a.ImageList.length;i++){
-           if(a.ImageList[i].Path == null){
-             continue;
-           }
-          if(a.ImageList[i].Path.indexOf(a.DefaultImage) != -1){
-            a.ImageList = this.swapArr(a.ImageList,0,i);
-            tag = false
-          }   
-         }
-         if(tag){
-           if(a.ImageList[0] != null){
-              let img = JSON.parse(JSON.stringify(a.ImageList[0]))
-              img.Path = a.CommonProductList[0].DefaultImage
-              img.SysNo = 0
-             a.ImageList.unshift(img)
-           }
-         }
+         a.ImageList.sort((a,b) => a.Priority-b.priority)
+        //  let tag = true;
+        //  for(let i=0;i<a.ImageList.length;i++){
+        //    if(a.ImageList[i].Path == null){
+        //      continue;
+        //    }
+        //   if(a.ImageList[i].Path.indexOf(a.DefaultImage) != -1){
+        //     a.ImageList = this.swapArr(a.ImageList,0,i);
+        //     tag = false
+        //   }   
+        //  }
+        //  if(tag){
+        //    if(a.ImageList[0] != null){
+        //       let img = JSON.parse(JSON.stringify(a.ImageList[0]))
+        //       img.Path = a.CommonProductList[0].DefaultImage
+        //       img.SysNo = 0
+        //      a.ImageList.unshift(img)
+        //    }
+        //  }
        });
     }
 
