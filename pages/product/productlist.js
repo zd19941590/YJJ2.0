@@ -506,7 +506,6 @@ export class ProductList extends Component {
     if (typeof (startNo) != 'undefined' && startNo != null && startNo > -1) {
       this.StartNo = startNo;
     }
-
     let searchStartNo = this.StartNo;
     thisObj.StartNo = thisObj.GetAllData ? thisObj.StartNo : this.StartNo + this.DefaultPageSize;
 

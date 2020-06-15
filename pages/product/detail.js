@@ -1093,9 +1093,10 @@ export class LeftMenu extends Component {
                 };
                 this.checkSlectInfoTitle(true);
               }}>
-                <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={
+                {/* <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={
                   this.state.isShow === 1 ? CompanyConfig.AppColor.Secondary : StyleConfig.SecondaryFront
-                } source={"productinfo"} />
+                } source={"productinfo"} /> */}
+                 <Text style={styles.lefttext}>详情</Text>
             </TouchableOpacity>
             {
               this.state.productList && this.state.productList.length > 1 ?
@@ -1118,7 +1119,7 @@ export class LeftMenu extends Component {
                     };
                     this.checkSlectInfoTitle(false);
                   }}>
-                  <View style={{
+                  {/* <View style={{
                     width: getResponsiveValue(80),
                     height: getResponsiveValue(80),
                     justifyContent: "center",
@@ -1143,7 +1144,8 @@ export class LeftMenu extends Component {
                     <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={
                       this.state.isShow === 2 ? CompanyConfig.AppColor.Secondary : StyleConfig.SecondaryFront
                     } source={"spec"} />
-                  </View>
+                  </View> */}
+                  <Text style={styles.lefttext}>规格</Text>
                 </TouchableOpacity>
                 : null
             }
@@ -1163,9 +1165,10 @@ export class LeftMenu extends Component {
               }
             }}>
               {/* <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={StyleConfig.SecondaryFront} source={"combination"} /> */}
-              <Image style={{ width: getResponsiveValue(36), height: getResponsiveValue(36) }}
+              {/* <Image style={{ width: getResponsiveValue(36), height: getResponsiveValue(36) }}
                 source={require(`../../assets/icons/slide.png`)}
-              />
+              /> */}
+              <Text style={styles.lefttext}>隐藏</Text>
             </TouchableOpacity>
             {/** back to index page */}
             {/* <TouchableOpacity activeOpacity={0.8} style={[styles.introducebtn, { backgroundColor: StyleConfig.Main }]} onPress={() => {
@@ -1180,13 +1183,15 @@ export class LeftMenu extends Component {
               this.shareImage()
               //this.startAnimation();
             }}>
-              <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={StyleConfig.SecondaryFront} source={"share"} />
+              {/* <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={StyleConfig.SecondaryFront} source={"share"} /> */}
+              <Text style={styles.lefttext}>分享</Text>
             </TouchableOpacity> : null}
             {/* 长图 */}
             <TouchableOpacity activeOpacity={0.8} style={[styles.introducebtn, { backgroundColor: StyleConfig.Main }]} onPress={() => {
                 this.gotoLongImageDetail(model.SysNo)
               }}>
-                <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={StyleConfig.SecondaryFront} source={"longimage"} />
+                {/* <SvgUri width={getResponsiveValue(36)} height={getResponsiveValue(36)} fill={StyleConfig.SecondaryFront} source={"longimage"} /> */}
+                <Text style={styles.lefttext}>长图</Text>
             </TouchableOpacity> 
           </View>
         </View>

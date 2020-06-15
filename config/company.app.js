@@ -52,6 +52,6 @@ export const CompanyAppConfig =  Object.assign({
     companySysNo: 1394
 }, config);
 // if u r testing or developing, this CompanyId is default;
-// CompanyAppConfig.CompanyID = '00000000-0000-0000-0000-000000000000';
+//CompanyAppConfig.CompanyID = '9ac9fe7e-dd4a-46f5-b124-7941f1744ae2';
 CompanyAppConfig.env='production';
 export default CompanyAppConfig;

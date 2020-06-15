@@ -381,7 +381,7 @@ export default class DataDownload extends PureComponent {
     if (json == null || json == undefined) {
       return;
     }
-
+    debugger;
     let ps = json.ProductStatus, ss = json.ProductSolutionStatus
     let path = json.Path;
     let defaultImage = json.DefaultImage;
@@ -625,6 +625,7 @@ export default class DataDownload extends PureComponent {
   lastInUpdateDateTime = null;
 
   updateState(newState) {
+    debugger;
     let completion = this.finishDownloadData();
     let files = this.file.files;
 
