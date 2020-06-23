@@ -1,4 +1,5 @@
 #import "AFPhotoBrowser.h"
+#import "AFPhoto.h"
 #import "AFPageIndicator.h"
 #import "AFPhotoBrowserPrivate.h"
 
@@ -62,8 +63,8 @@
     _delayToHideElements = 5;
     _carouselInterval = 3;
     
-    _IndicatorTintColor = [UIColor lightGrayColor];
-    _currentIndicatorColor = [UIColor blackColor];
+    _IndicatorTintColor = [UIColor darkGrayColor];
+    _currentIndicatorColor = [UIColor whiteColor];
     
     _photos = [[NSMutableArray alloc] init];
     _thumbPhotos = [[NSMutableArray alloc] init];
@@ -78,6 +79,7 @@
 }
 
 - (void)viewDidLoad {
+    self.view.backgroundColor = [UIColor blackColor];
     self.view.clipsToBounds = YES;
     
     CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
@@ -87,6 +89,7 @@
     _pagingScrollView.pagingEnabled = YES;
     _pagingScrollView.showsHorizontalScrollIndicator = NO;
     _pagingScrollView.showsVerticalScrollIndicator = NO;
+    _pagingScrollView.backgroundColor = [UIColor blackColor];
     _pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
     [self.view addSubview:_pagingScrollView];
     
@@ -105,6 +108,8 @@
         _pagingIndicator.layer.masksToBounds = YES;
         [self.view addSubview:_pagingIndicator];
     }
+    
+//    [self reloadData];
     
     [super viewDidLoad];
 }
@@ -268,7 +273,6 @@
     AFPageScrollView *page = [_recycledPages anyObject];
     if (page) {
         [_recycledPages removeObject:page];
-        page = nil;
     }
     return page;
 }

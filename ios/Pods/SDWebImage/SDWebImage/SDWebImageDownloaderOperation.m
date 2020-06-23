@@ -73,7 +73,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
                                 options:(SDWebImageDownloaderOptions)options {
     if ((self = [super init])) {
         _request = [request copy];
-        _shouldDecompressImages = NO;
+        _shouldDecompressImages = YES;
         _options = options;
         _callbackBlocks = [NSMutableArray new];
         _executing = NO;

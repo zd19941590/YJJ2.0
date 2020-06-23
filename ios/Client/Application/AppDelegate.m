@@ -15,9 +15,7 @@
 #import <SDWebImage/SDImageCache.h>
 #import <SDWebImage/SDWebImageDownloader.h>
 
-#import "NthCBPushHelper.h" /**<处理推送事件 */
 #import <Bugly/Bugly.h> /**<腾讯Bugly，崩溃分析 */
-#import "NthCUmengConfig.h" /** 友盟统计分享 */
 
 @interface AppDelegate ()
 @end
@@ -56,24 +54,6 @@
     return YES;
 }
 
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-    [NthCBPushHelper registerForApplication:application didRegisterUserNotificationSettings:notificationSettings];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    [NthCBPushHelper registerForApplication:application
-               didReceiveRemoteNotification:userInfo
-                     fetchCompletionHandler:completionHandler];
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [NthCBPushHelper registerForApplication:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
-
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    [NthCBPushHelper registerForApplication:application didFailToRegisterForRemoteNotificationsWithError:error];
-}
-
 #pragma mark -
 ///////////////////////////////////////////////////////////////////////
 
@@ -81,14 +61,8 @@
 /// 禁止显示键盘上边`Toolbar`
   [[IQKeyboardManager sharedManager] setEnableAutoToolbar:NO];
   
-/// Reigster for remote notifications.
-  [NthCBPushHelper registerForApplication:application didFinishLaunchingWithOptions:launchOptions];
-  
 /// 腾讯Bugly，崩溃分析
   [Bugly startWithAppId:@"025d4fd4bc"];
-
-///友盟统计分析
-  [NthCUmengConfig invokeThisMethodToInitialUmentConfig];
   
   // Pod更新时请务必确保`shouldDecompressImages = NO`，否则如果图片分辨率太大会导致闪退
   [[SDWebImageDownloader sharedDownloader] setShouldDecompressImages:NO];

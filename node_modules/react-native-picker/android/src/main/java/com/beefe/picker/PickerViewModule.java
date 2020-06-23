@@ -1,9 +1,11 @@
 package com.beefe.picker;
 
+import android.content.res.AssetManager;
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -12,6 +14,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.os.Build;
 
 import com.beefe.picker.util.MIUIUtils;
 import com.beefe.picker.view.OnSelectedListener;
@@ -74,6 +77,10 @@ import static android.graphics.Color.argb;
  */
 
 public class PickerViewModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
+    
+    private static final String FONTS = "fonts/";
+    private static final String OTF = ".otf";
+    private static final String TTF = ".ttf";
 
     private static final String REACT_CLASS = "BEEPickerManager";
 
@@ -102,6 +109,8 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
     private static final String PICKER_TEXT_COLOR = "pickerFontColor";
     private static final String PICKER_TEXT_SIZE = "pickerFontSize";
     private static final String PICKER_TEXT_ELLIPSIS_LEN = "pickerTextEllipsisLen";
+
+    private static final String PICKER_FONT_FAMILY = "pickerFontFamily";
 
     private static final String PICKER_EVENT_NAME = "pickerEvent";
     private static final String EVENT_KEY_CONFIRM = "confirm";
@@ -339,6 +348,32 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                     break;
             }
 
+            if (options.hasKey(PICKER_FONT_FAMILY)) {
+                Typeface typeface = null;
+                AssetManager assetManager = activity.getApplicationContext().getAssets();
+                final String fontFamily = options.getString(PICKER_FONT_FAMILY);
+                try {
+                    String path = FONTS + fontFamily + TTF;
+                    typeface = Typeface.createFromAsset(assetManager, path);
+                } catch (Exception ignored) {
+                    try {
+                        String path = FONTS + fontFamily + OTF;
+                        typeface = Typeface.createFromAsset(assetManager, path);
+                    } catch (Exception ignored2) {
+                        try {
+                            typeface = Typeface.create(fontFamily, Typeface.NORMAL);
+                        } catch (Exception ignored3) {
+                        }
+                    }
+                }
+                cancelTV.setTypeface(typeface);
+                titleTV.setTypeface(typeface);
+                confirmTV.setTypeface(typeface);
+
+                pickerViewAlone.setTypeface(typeface);
+                pickerViewLinkage.setTypeface(typeface);
+            }
+
             if (options.hasKey(SELECTED_VALUE)) {
                 ReadableArray array = options.getArray(SELECTED_VALUE);
                 String[] selectedValue = getSelectedValue(array);
@@ -358,10 +393,14 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                 WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
                 Window window = dialog.getWindow();
                 if (window != null) {
-                    if (MIUIUtils.isMIUI()) {
-                        layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION;
-                    }else {
-                        //layoutParams.type = WindowManager.LayoutParams.TYPE_TOAST;
+                    if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        window.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                    }else{
+                        if (MIUIUtils.isMIUI()) {
+                            layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION;
+                        }else {
+                            //layoutParams.type = WindowManager.LayoutParams.TYPE_TOAST;
+                        }
                     }
                     layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
                     layoutParams.format = PixelFormat.TRANSPARENT;
@@ -369,7 +408,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                     layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
                     layoutParams.height = height;
                     layoutParams.gravity = Gravity.BOTTOM;
-                    window.setAttributes(layoutParams);
+                    window.setAttributes(layoutParams);   
                 }
             } else {
                 dialog.dismiss();

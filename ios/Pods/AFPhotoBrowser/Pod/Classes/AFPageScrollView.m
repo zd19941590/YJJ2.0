@@ -89,11 +89,13 @@
 }
 
 - (void)setup {
+    self.backgroundColor = [UIColor blackColor];
     self.clipsToBounds = YES;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
     _pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
+    _pagingScrollView.backgroundColor = [UIColor blackColor];
     _pagingScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _pagingScrollView.delegate = self;
     _pagingScrollView.pagingEnabled = YES;
@@ -112,6 +114,7 @@
         CGPoint pagingIndicatorCenter = [self centerForPagingIndicator];
         _pagingIndicator = [[UIPageControl alloc] initWithFrame:CGRectZero];
         _pagingIndicator.transform = CGAffineTransformMakeRotation(M_PI/2);
+        _pagingIndicator.backgroundColor = [UIColor orangeColor];
         _pagingIndicator.center = pagingIndicatorCenter;
         _pagingIndicator.pageIndicatorTintColor = self.IndicatorTintColor;
         _pagingIndicator.currentPageIndicatorTintColor = self.currentIndicatorColor;
@@ -151,9 +154,9 @@
     _performingLayout = NO;
     _viewIsActive = NO;
 
-//    [_photos removeAllObjects];
-//    [_thumbPhotos removeAllObjects];
-//
+    [_photos removeAllObjects];
+    [_thumbPhotos removeAllObjects];
+    
 //    [_visiblePages removeAllObjects];
 //    [_recycledPages removeAllObjects];
 }
@@ -417,7 +420,6 @@
     AFZoomingScrollView *page = [_recycledPages anyObject];
     if (page) {
         [_recycledPages removeObject:page];
-        page = nil;
     }
     return page;
 }

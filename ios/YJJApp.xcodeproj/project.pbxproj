@@ -50,7 +50,6 @@
 		7A0EE657212A5F9C000F97ED /* libKCKeepAwake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EE61C212A5F97000F97ED /* libKCKeepAwake.a */; };
 		7A2CDE7A20F8AE36005FD045 /* libUartLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2CDE7920F8AE36005FD045 /* libUartLib.a */; };
 		7A54304F2123AED600925E55 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5430102123AEB900925E55 /* libBVLinearGradient.a */; };
-		7ABE4DAD211EC42300D6BB42 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAACAA0C2074C017006542E1 /* libBPush.a */; };
 		7BEDDE924F6048D88B892E3D /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D61D2133E4843E38AFCD3DC /* Octicons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8FBEC739786F4DC880FC76BC /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D8F61D7BA547118E53F74A /* Ionicons.ttf */; };
@@ -62,10 +61,6 @@
 		DA71A39920799D8B002D5A94 /* libRNReactNativeDocViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC5696620294018004C16C0 /* libRNReactNativeDocViewer.a */; };
 		DA8474BE206C8221001269F7 /* ap.py in Resources */ = {isa = PBXBuildFile; fileRef = DA847488206C8220001269F7 /* ap.py */; };
 		DA99D8EB205F54BD00E96981 /* CompanyConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA99D8EA205F54BD00E96981 /* CompanyConfigurationManager.m */; };
-		DAACAA0E2074C017006542E1 /* BPushCerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAACAA0B2074C017006542E1 /* BPushCerResource.bundle */; };
-		DAACAA102074C017006542E1 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = DAACAA0D2074C017006542E1 /* test.caf */; };
-		DAACAA742074C646006542E1 /* NthCBPushHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B1A7F1FC2F6FF00485994 /* NthCBPushHelper.m */; };
-		DAC6A8D120746F67000065E5 /* libRNBaiduPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF711331FC284720047F0B3 /* libRNBaiduPush.a */; };
 		DAD03D1F2057B7FC0013BC9F /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD035132050D9D60013BC9F /* libCodePush.a */; };
 		DAD0403F2058FB2A0013BC9F /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAD0403E2058FB2A0013BC9F /* bundle */; };
 		DAFB57452079FA3900E0BA11 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -85,9 +80,6 @@
 		DAFC68832099659000357AEF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFC68822099658E00357AEF /* libsqlite3.tbd */; };
 		DAFC68842099659900357AEF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB83C721FC2C73C00B08CB8 /* CoreTelephony.framework */; };
 		DAFC6885209965A400357AEF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB83C761FC2C75900B08CB8 /* SystemConfiguration.framework */; };
-		DAFC68892099666F00357AEF /* UMAnalyticsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC68882099666F00357AEF /* UMAnalyticsModule.m */; };
-		DAFC688C209967C600357AEF /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC688B209967C600357AEF /* RNUMConfigure.m */; };
-		DAFC689720996BA600357AEF /* NthCUmengConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC689620996BA600357AEF /* NthCUmengConfig.m */; };
 		DAFC6EFF209AEB6900357AEF /* PrinterConnectionIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC6EF4209AEB6800357AEF /* PrinterConnectionIndicatorView.m */; };
 		DAFC6F00209AEB6900357AEF /* PrinterListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC6EF6209AEB6800357AEF /* PrinterListCell.m */; };
 		DAFC6F01209AEB6900357AEF /* PrinterListFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC6EF8209AEB6800357AEF /* PrinterListFooterView.m */; };
@@ -444,20 +436,6 @@
 			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
 			remoteInfo = "RNSVG-tvOS";
 		};
-		7A5B67551FF375D3008AB48C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A8C6D1C63B5B48DE8FB6A7E4 /* rnpc_demo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 13B07F961A680F5B00A75B9A;
-			remoteInfo = rnpc_demo;
-		};
-		7A5B67571FF375D3008AB48C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A8C6D1C63B5B48DE8FB6A7E4 /* rnpc_demo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00E356EE1AD99517003FC87E;
-			remoteInfo = rnpc_demoTests;
-		};
 		7A66810C20FC28580090FE4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7A66810820FC28570090FE4D /* RCTPhotoBrowser.xcodeproj */;
@@ -520,13 +498,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
-		};
-		7AF711321FC284720047F0B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7AF7112E1FC284720047F0B3 /* RNBaiduPush.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNBaiduPush;
 		};
 		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -615,8 +586,6 @@
 		7A0C40B72112E04000C578AB /* RNFS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
 		7A14523C200772D700BE0FFC /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		7A1B19EB1FC2D7F700485994 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		7A1B1A7E1FC2F6FF00485994 /* NthCBPushHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NthCBPushHelper.h; sourceTree = "<group>"; };
-		7A1B1A7F1FC2F6FF00485994 /* NthCBPushHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NthCBPushHelper.m; sourceTree = "<group>"; };
 		7A1B1A811FC3027B00485994 /* NthCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NthCConstants.h; sourceTree = "<group>"; };
 		7A2CDE7920F8AE36005FD045 /* libUartLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUartLib.a; sourceTree = "<group>"; };
 		7A3DEB691FBEC712007597B0 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = YJJApp/www; sourceTree = "<group>"; };
@@ -634,7 +603,6 @@
 		7ADBD0F61FCBB568000C9999 /* NthCDemandBackup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NthCDemandBackup.h; sourceTree = "<group>"; };
 		7AF5A0FF20F883BE004B0D60 /* libRCTPhotoBrowser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRCTPhotoBrowser.a; path = "../../../../Library/Developer/Xcode/DerivedData/YJJApp-gyngsouttdedsdawmmhyeburcmah/Build/Products/Debug-iphoneos/libRCTPhotoBrowser.a"; sourceTree = "<group>"; };
 		7AF710AC1FC27CF50047F0B3 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBPush.a; path = "../node_modules/react-native-baidu-push/ios/BDPush-SDK-IOS-1.4.9.2/libBPush.a"; sourceTree = "<group>"; };
-		7AF7112E1FC284720047F0B3 /* RNBaiduPush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNBaiduPush.xcodeproj; path = "../node_modules/react-native-baidu-push/ios/RNBaiduPush.xcodeproj"; sourceTree = "<group>"; };
 		7AF711391FC286FB0047F0B3 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
 		7AF7113B1FC287BD0047F0B3 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		7EA7936D42FA4FF9B21FD9A2 /* libRNImagePicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNImagePicker.a; sourceTree = "<group>"; };
@@ -646,7 +614,6 @@
 		8715F215B62A4810927EFA22 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		8EB361212A5B4067A28E8B0E /* libRCTActionSheet.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTActionSheet.a; sourceTree = "<group>"; };
 		9441D956FFD8434A879AA381 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		A8C6D1C63B5B48DE8FB6A7E4 /* rnpc_demo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = rnpc_demo.xcodeproj; path = "../node_modules/react-native-percentage-circle/rnpc_demo/ios/rnpc_demo.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		AF8A5E75D01F4041840D1E40 /* libSQLite.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSQLite.a; sourceTree = "<group>"; };
 		BBFAC0174097402D83C61752 /* SQLite.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../node_modules/react-native-sqlite-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; };
@@ -663,10 +630,6 @@
 		DA847488206C8220001269F7 /* ap.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ap.py; sourceTree = "<group>"; };
 		DA99D8E9205F54BD00E96981 /* CompanyConfigurationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyConfigurationManager.h; sourceTree = "<group>"; };
 		DA99D8EA205F54BD00E96981 /* CompanyConfigurationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyConfigurationManager.m; sourceTree = "<group>"; };
-		DAACAA0A2074C017006542E1 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
-		DAACAA0B2074C017006542E1 /* BPushCerResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BPushCerResource.bundle; sourceTree = "<group>"; };
-		DAACAA0C2074C017006542E1 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
-		DAACAA0D2074C017006542E1 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		DAC5696120294018004C16C0 /* RNReactNativeDocViewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNReactNativeDocViewer.xcodeproj; path = "../node_modules/react-native-doc-viewer/ios/RNReactNativeDocViewer.xcodeproj"; sourceTree = "<group>"; };
 		DAD03D212057B8210013BC9F /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD03D232057B87A0013BC9F /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -675,12 +638,6 @@
 		DAD0403E2058FB2A0013BC9F /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
 		DAFB574A207A201100E0BA11 /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFC68822099658E00357AEF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		DAFC68872099666B00357AEF /* UMAnalyticsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsModule.h; sourceTree = "<group>"; };
-		DAFC68882099666F00357AEF /* UMAnalyticsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMAnalyticsModule.m; sourceTree = "<group>"; };
-		DAFC688A209967C500357AEF /* RNUMConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUMConfigure.h; sourceTree = "<group>"; };
-		DAFC688B209967C600357AEF /* RNUMConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUMConfigure.m; sourceTree = "<group>"; };
-		DAFC689520996BA600357AEF /* NthCUmengConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NthCUmengConfig.h; sourceTree = "<group>"; };
-		DAFC689620996BA600357AEF /* NthCUmengConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NthCUmengConfig.m; sourceTree = "<group>"; };
 		DAFC6EF3209AEB6800357AEF /* PrinterConnectionIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterConnectionIndicatorView.h; sourceTree = "<group>"; };
 		DAFC6EF4209AEB6800357AEF /* PrinterConnectionIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrinterConnectionIndicatorView.m; sourceTree = "<group>"; };
 		DAFC6EF5209AEB6800357AEF /* PrinterListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterListCell.h; sourceTree = "<group>"; };
@@ -725,7 +682,6 @@
 				7A0E65C5212CF2E500CB12EE /* libRCTPhotoBrowser.a in Frameworks */,
 				7A0EE657212A5F9C000F97ED /* libKCKeepAwake.a in Frameworks */,
 				7A54304F2123AED600925E55 /* libBVLinearGradient.a in Frameworks */,
-				7ABE4DAD211EC42300D6BB42 /* libBPush.a in Frameworks */,
 				7A0C40FC2112E04D00C578AB /* libRNFS.a in Frameworks */,
 				DAFC6885209965A400357AEF /* SystemConfiguration.framework in Frameworks */,
 				DAFC68842099659900357AEF /* CoreTelephony.framework in Frameworks */,
@@ -745,7 +701,6 @@
 				DAFB5746207A1C9D00E0BA11 /* libART.a in Frameworks */,
 				DAFB57452079FA3900E0BA11 /* libRCTAnimation.a in Frameworks */,
 				DA71A39920799D8B002D5A94 /* libRNReactNativeDocViewer.a in Frameworks */,
-				DAC6A8D120746F67000065E5 /* libRNBaiduPush.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -1098,15 +1053,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7A5B67511FF375D3008AB48C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7A5B67561FF375D3008AB48C /* rnpc_demo.app */,
-				7A5B67581FF375D3008AB48C /* rnpc_demoTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7A66810920FC28570090FE4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1211,10 +1157,6 @@
 			children = (
 				DA99D8E9205F54BD00E96981 /* CompanyConfigurationManager.h */,
 				DA99D8EA205F54BD00E96981 /* CompanyConfigurationManager.m */,
-				DAFC689520996BA600357AEF /* NthCUmengConfig.h */,
-				DAFC689620996BA600357AEF /* NthCUmengConfig.m */,
-				7A1B1A7E1FC2F6FF00485994 /* NthCBPushHelper.h */,
-				7A1B1A7F1FC2F6FF00485994 /* NthCBPushHelper.m */,
 				7A6E119F1FC452140033020F /* NthCPushMessageBridge.h */,
 				7A6E11A01FC452140033020F /* NthCPushMessageBridge.m */,
 			);
@@ -1225,9 +1167,7 @@
 			isa = PBXGroup;
 			children = (
 				01108BD6215B712800E87438 /* RCT */,
-				7ABE4C80211E0C9A00D6BB42 /* BaiduPush */,
 				7ABE4C81211E0CA900D6BB42 /* Printer */,
-				7ABE4C7E211E0C8800D6BB42 /* UMeng */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -1251,28 +1191,6 @@
 			path = Printer;
 			sourceTree = "<group>";
 		};
-		7ABE4C7E211E0C8800D6BB42 /* UMeng */ = {
-			isa = PBXGroup;
-			children = (
-				DAFC68872099666B00357AEF /* UMAnalyticsModule.h */,
-				DAFC68882099666F00357AEF /* UMAnalyticsModule.m */,
-				DAFC688A209967C500357AEF /* RNUMConfigure.h */,
-				DAFC688B209967C600357AEF /* RNUMConfigure.m */,
-			);
-			path = UMeng;
-			sourceTree = "<group>";
-		};
-		7ABE4C80211E0C9A00D6BB42 /* BaiduPush */ = {
-			isa = PBXGroup;
-			children = (
-				DAACAA0A2074C017006542E1 /* BPush.h */,
-				DAACAA0B2074C017006542E1 /* BPushCerResource.bundle */,
-				DAACAA0C2074C017006542E1 /* libBPush.a */,
-				DAACAA0D2074C017006542E1 /* test.caf */,
-			);
-			path = BaiduPush;
-			sourceTree = "<group>";
-		};
 		7ABE4C81211E0CA900D6BB42 /* Printer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1289,14 +1207,6 @@
 			path = Browser;
 			sourceTree = "<group>";
 		};
-		7AF7112F1FC284720047F0B3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7AF711331FC284720047F0B3 /* libRNBaiduPush.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -1306,7 +1216,6 @@
 				7A66810820FC28570090FE4D /* RCTPhotoBrowser.xcodeproj */,
 				DA71A39320799D7C002D5A94 /* RNReactNativeDocViewer.xcodeproj */,
 				7A14523C200772D700BE0FFC /* ART.xcodeproj */,
-				7AF7112E1FC284720047F0B3 /* RNBaiduPush.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -1324,7 +1233,6 @@
 				8715F215B62A4810927EFA22 /* RCTOrientation.xcodeproj */,
 				BBFAC0174097402D83C61752 /* SQLite.xcodeproj */,
 				BF17FCA20477429CB7A23D8A /* RNSVG.xcodeproj */,
-				A8C6D1C63B5B48DE8FB6A7E4 /* rnpc_demo.xcodeproj */,
 				E1D6CDE76CCA4B949932EF22 /* RNShare.xcodeproj */,
 				557F0F44D601467A82B89825 /* RCTVideo.xcodeproj */,
 				FF26E45E00D64715921998F6 /* RCTBEEPickerManager.xcodeproj */,
@@ -1629,10 +1537,6 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 7AF7112F1FC284720047F0B3 /* Products */;
-					ProjectRef = 7AF7112E1FC284720047F0B3 /* RNBaiduPush.xcodeproj */;
-				},
-				{
 					ProductGroup = 7A11826B1FB2DB510062BCFF /* Products */;
 					ProjectRef = 2429C0DD77454F77A0D0E826 /* RNDeviceInfo.xcodeproj */;
 				},
@@ -1647,10 +1551,6 @@
 				{
 					ProductGroup = 7A30F5E82005A89400C95DD9 /* Products */;
 					ProjectRef = E496BA887DA54621866A94C7 /* RNImagePicker.xcodeproj */;
-				},
-				{
-					ProductGroup = 7A5B67511FF375D3008AB48C /* Products */;
-					ProjectRef = A8C6D1C63B5B48DE8FB6A7E4 /* rnpc_demo.xcodeproj */;
 				},
 				{
 					ProductGroup = DAC5696220294018004C16C0 /* Products */;
@@ -2013,20 +1913,6 @@
 			remoteRef = 7A58C6751FCD4D9700DA8AAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7A5B67561FF375D3008AB48C /* rnpc_demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = rnpc_demo.app;
-			remoteRef = 7A5B67551FF375D3008AB48C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7A5B67581FF375D3008AB48C /* rnpc_demoTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = rnpc_demoTests.xctest;
-			remoteRef = 7A5B67571FF375D3008AB48C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		7A66810D20FC28580090FE4D /* libRCTPhotoBrowser.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -2090,13 +1976,6 @@
 			remoteRef = 7A90EC2E1FBC1E93008BD660 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7AF711331FC284720047F0B3 /* libRNBaiduPush.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNBaiduPush.a;
-			remoteRef = 7AF711321FC284720047F0B3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -2153,9 +2032,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAACAA102074C017006542E1 /* test.caf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				DAACAA0E2074C017006542E1 /* BPushCerResource.bundle in Resources */,
 				DAD0403F2058FB2A0013BC9F /* bundle in Resources */,
 				DA8474BE206C8221001269F7 /* ap.py in Resources */,
 				2822C79B6CFF441D95E2D592 /* Entypo.ttf in Resources */,
@@ -2242,7 +2119,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YJJApp/Pods-YJJApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YJJApp/Pods-YJJApp-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -2251,7 +2128,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YJJApp/Pods-YJJApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YJJApp/Pods-YJJApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2269,19 +2146,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAACAA742074C646006542E1 /* NthCBPushHelper.m in Sources */,
 				DAFC6F02209AEB6900357AEF /* PrinterListHelper.m in Sources */,
 				DA99D8EB205F54BD00E96981 /* CompanyConfigurationManager.m in Sources */,
-				DAFC688C209967C600357AEF /* RNUMConfigure.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				DAFC6F01209AEB6900357AEF /* PrinterListFooterView.m in Sources */,
 				DAFC6F00209AEB6900357AEF /* PrinterListCell.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				DAFC68892099666F00357AEF /* UMAnalyticsModule.m in Sources */,
 				DAFC6F03209AEB6900357AEF /* PrinterListViewController.m in Sources */,
 				DAFC6F04209AEB6900357AEF /* RNRouterManager.m in Sources */,
 				DAFC6EFF209AEB6900357AEF /* PrinterConnectionIndicatorView.m in Sources */,
-				DAFC689720996BA600357AEF /* NthCUmengConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2501,6 +2374,7 @@
 					"$(PROJECT_DIR)/ThirdParty/BaiduPush",
 					"$(PROJECT_DIR)/ThirdParty/Printer",
 				);
+				MARKETING_VERSION = 2.4.2;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2570,6 +2444,7 @@
 					"$(PROJECT_DIR)/ThirdParty/BaiduPush",
 					"$(PROJECT_DIR)/ThirdParty/Printer",
 				);
+				MARKETING_VERSION = 2.4.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -3010,6 +2885,7 @@
 					"$(PROJECT_DIR)/ThirdParty/BaiduPush",
 					"$(PROJECT_DIR)/NthCloudKit/Printer/Libs",
 				);
+				MARKETING_VERSION = 2.4.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

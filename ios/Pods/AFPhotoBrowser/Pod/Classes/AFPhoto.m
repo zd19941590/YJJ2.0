@@ -159,21 +159,42 @@
 - (void)performLoadUnderlyingImageAndNotify {
     
     // Get underlying image
-    if (_image) { // We have UIImage!
+    if (_image) {
+        
+        // We have UIImage!
         self.underlyingImage = _image;
         [self imageLoadingComplete];
-    } else if (_photoURL) { // Check what type of url it is
-        if ([[[_photoURL scheme] lowercaseString] isEqualToString:@"assets-library"]) { // Load from assets library
+        
+    } else if (_photoURL) {
+        
+        // Check what type of url it is
+        if ([[[_photoURL scheme] lowercaseString] isEqualToString:@"assets-library"]) {
+            
+            // Load from assets library
             [self _performLoadUnderlyingImageAndNotifyWithAssetsLibraryURL: _photoURL];
-        } else if ([_photoURL isFileReferenceURL]) { // Load from local file async
+            
+        } else if ([_photoURL isFileReferenceURL]) {
+            
+            // Load from local file async
             [self _performLoadUnderlyingImageAndNotifyWithLocalFileURL: _photoURL];
-        } else { // Load async from web (using SDWebImage)
+            
+        } else {
+            
+            // Load async from web (using SDWebImage)
             [self _performLoadUnderlyingImageAndNotifyWithWebURL: _photoURL];
+            
         }
-    } else if (_asset) { // Load from photos asset
+        
+    } else if (_asset) {
+        
+        // Load from photos asset
         [self _performLoadUnderlyingImageAndNotifyWithAsset: _asset targetSize:_assetTargetSize];
-    } else { // Image is empty
+        
+    } else {
+        
+        // Image is empty
         [self imageLoadingComplete];
+        
     }
 }
 

@@ -1,15 +1,15 @@
 platform :ios, '9.0'
-inhibit_all_warnings!
+#inhibit_all_warnings!
 
 target 'YJJApp' do
     pod 'AFPhotoBrowser', '0.0.6'
-    pod 'Bugly' #腾讯Bugly，崩溃分析检测
+    pod 'Bugly', '2.5.0' #腾讯Bugly，崩溃分析检测
     pod 'DACircularProgress'
     pod 'IQKeyboardManager', '3.3.7' #处理键盘遮挡问题，指定此版本号是为了兼容【iOS7】
     pod 'Masonry'
     pod 'MBProgressHUD'
-    pod 'SDWebImage'
+    pod 'SDWebImage', '4.4.2'
     pod 'UMCCommon'
-    pod 'UMCAnalytics'
+#    pod 'UMCAnalytics'
     pod 'UMCSecurityPlugins'
 end
