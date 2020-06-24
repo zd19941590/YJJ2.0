@@ -17,7 +17,6 @@ import AppConfig from '../../config/app.config.js';
 import Share from '../../helpers/shareHelper.config.js';
 import CustomHeader from '../../components/CustomHeader.js';
 import ProductsCheck from '../../components/ProductsCheck.js';
-import AnalyticsUtil from '../../services/AnalyticsUtil';
 import HorizonVerticalView from '../../components/HorizonVerticalView/Sliding.js';
 import KeepAwake from "react-native-keep-awake";
 
@@ -59,7 +58,6 @@ export default class ProductSolutionDetail extends Component {
   isAndroid = 'android' === Platform.OS;
 
   componentDidMount() {
-    AnalyticsUtil.onEventWithLabel('ProductsolutionDetail', global.AppAuthentication ? global.AppAuthentication.APPCompanyName : global.APPCompanyName);
     if (this.props.navigation.state.params != null) {
       var listPageSearchObj = this.props.navigation.state.params.searchObj;
       if (typeof (listPageSearchObj) != 'undefined' && listPageSearchObj != null && typeof (listPageSearchObj.MenuSeriesSysNo) != 'undefined') {

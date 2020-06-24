@@ -39,7 +39,6 @@ import Checkbox from '../../components/Checkbox.js'
 import axios from "axios";
 import { formatStr } from "../../helpers/utils";
 import dismissKeyboard from "dismissKeyboard";
-import AnalyticsUtil from '../../services/AnalyticsUtil'
 import FileHelper from '../../helpers/fileHelper.config.js';
 import VersionUpdateService from "../../services/versionupdate";
 var serv = new VersionUpdateService();
@@ -248,7 +247,6 @@ export default class Login extends Component {
   };
 
   NativeNextPage() {
-    AnalyticsUtil.onEventWithLabel('Login', global.AppAuthentication ? global.AppAuthentication.APPCompanyName : global.APPCompanyName);
     this.props.navigation.dispatch(resetAction);
   }
 

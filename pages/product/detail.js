@@ -26,7 +26,6 @@ import CustomHeader from '../../components/CustomHeader.js';
 import OperationMessage from '../../components/OperationMessage.js';
 import ProductsCheck from '../../components/ProductsCheck.js';
 import { joinstr } from "../../helpers/utils";
-import AnalyticsUtil from '../../services/AnalyticsUtil';
 import CommonService from '../../services/common.js';
 import FileHelper from '../../helpers/fileHelper.config.js';
 import { GetCompanyID } from "../../helpers/utils";
@@ -92,7 +91,6 @@ export default class ProductDetails extends Component {
   });
   UNSAFE_componentWillMount() {
     KeepAwake.activate();
-    AnalyticsUtil.onEventWithLabel('ProductDetail', global.AppAuthentication ? global.AppAuthentication.APPCompanyName : global.APPCompanyName);
   }
   componentWillUnmount() {
     KeepAwake.deactivate();

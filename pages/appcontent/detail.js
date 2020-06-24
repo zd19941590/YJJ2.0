@@ -19,7 +19,6 @@ import CustomHeader from '../../components/CustomHeader.js';
 import CompanyConfig from '../../config/company.config.js';
 import { getResponsiveValue, getResponsiveFontSize } from "../../assets/default.theme";
 import AppConfig from '../../config/app.config.js';
-import AnalyticsUtil from '../../services/AnalyticsUtil'
 import HorizonVerticalView from '../../components/HorizonVerticalView/Sliding.js';
 import Share from '../../helpers/shareHelper.config.js'
 import VideoPlayer from 'react-native-af-video-player';
@@ -53,8 +52,6 @@ export class ContentDetail extends BaseComponent {
   }
 
   componentDidMount() {
-    AnalyticsUtil.onEventWithLabel('ContentDetailPage', global.AppAuthentication ? global.AppAuthentication.APPCompanyName : global.APPCompanyName);
-
     let self = this;
     if (this.props.sysno && !this.props.content) {
       let contentService = new ContentService();
