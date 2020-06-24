@@ -59,7 +59,6 @@ export default class ProductSolutionDetail extends Component {
   isAndroid = 'android' === Platform.OS;
 
   componentDidMount() {
-    AnalyticsUtil.onEventWithLabel('ProductsolutionDetail', global.AppAuthentication ? global.AppAuthentication.APPCompanyName : global.APPCompanyName);
     if (this.props.navigation.state.params != null) {
       var listPageSearchObj = this.props.navigation.state.params.searchObj;
       if (typeof (listPageSearchObj) != 'undefined' && listPageSearchObj != null && typeof (listPageSearchObj.MenuSeriesSysNo) != 'undefined') {
