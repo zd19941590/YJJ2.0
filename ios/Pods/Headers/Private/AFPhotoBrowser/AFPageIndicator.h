@@ -1,1 +1,0 @@
-../../../AFPhotoBrowser/Pod/Classes/AFPageIndicator.h
