@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import AppConfig from '../config/app.config.js';
 import CompanyConfig from '../config/company.config.js';
-import { getResponsiveValue, getResponsiveFontSize } from '../assets/default.theme.js';
+import { getResponsiveValue } from '../assets/default.theme.js';
 import SvgUri from '../components/svguri.js';
 let pageStyles = null;
 
@@ -20,11 +20,8 @@ function setStyle() {
             height: getResponsiveValue(AppConfig.design.height),
             alignItems: "center",
             justifyContent: "center",
-            // backgroundColor: 'gray',
         },
         emptyContainer: {
-            // backgroundColor: CompanyConfig.formatColor(CompanyConfig.AppColor.Main, "66"),
-            // backgroundColor:'red',
             width: getResponsiveValue(870),
             height: getResponsiveValue(500),
             alignItems: 'center',
@@ -32,8 +29,6 @@ function setStyle() {
             borderRadius: getResponsiveValue(20),
         },
         nothinhContainer: {
-            // backgroundColor: CompanyConfig.formatColor(CompanyConfig.AppColor.Main, "40"),
-            // backgroundColor:'red',
             width: getResponsiveValue(870),
             height: getResponsiveValue(500),
             alignItems: 'center',
@@ -112,16 +107,7 @@ export default class NotFond extends Component {
         let sizeWidth = getResponsiveValue(275);
 
         return (<View style={this.getBaseStyleArray()}
-        // onPress={()=>{
-        // if(this.props.onPress){
-        //     this.props.onPress();
-        // }}} 
         >
-            {/* <TouchableOpacity onResponderSingleTapConfirmed={
-            this.props.onSingleTapConfirmed && this.props.onSingleTapConfirmed()
-        }> */}
-
-
             {
                 this.props.ShowNothing ?
                     <View style={pageStyles.emptyContainer} {...this._panResponder.panHandlers}>
@@ -132,14 +118,6 @@ export default class NotFond extends Component {
                         <SvgUri width={sizeWidth} fill={CompanyConfig.AppColor.DescriptionFront} source={"404"} />
                     </View>
             }
-            {/* </TouchableOpacity> */}
         </View>);
     }
-
-
 }
-
-
-
-
-

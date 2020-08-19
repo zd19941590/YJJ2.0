@@ -25,19 +25,11 @@ function setStyle() {
             width: getResponsiveValue(184),
             height: getResponsiveValue(52),
             flexDirection: 'row',
-            // backgroundColor: 'gray'
         },
-        // tempText: {
-        //     width: getResponsiveValue(50),
-        //     backgroundColor: "rgba(255, 255, 255, 0.15)",
-        // },
-
         addOrReduce: {
             width: getResponsiveValue(50),
             justifyContent: 'center',
             alignItems: 'center',
-            //backgroundColor: CompanyConfig.formatColor(CompanyConfig.AppColor.Secondary, "4D"),
-            // borderRadius: 8,
             borderTopRightRadius: getResponsiveValue(8),
             borderBottomRightRadius: getResponsiveValue(8),
             borderWidth: getResponsiveValue(1),
@@ -47,8 +39,6 @@ function setStyle() {
             width: getResponsiveValue(50),
             justifyContent: 'center',
             alignItems: 'center',
-            // backgroundColor: CompanyConfig.formatColor(CompanyConfig.AppColor.Secondary, "4D"),
-            // borderRadius: 8,
             borderTopLeftRadius: getResponsiveValue(8),
             borderBottomLeftRadius: getResponsiveValue(8),
             borderWidth: getResponsiveValue(1),
@@ -57,7 +47,6 @@ function setStyle() {
 
         inputNumber: {
             width: getResponsiveValue(80),
-            // backgroundColor: CompanyConfig.formatColor(CompanyConfig.AppColor.Main, "4D"),
             borderRadius: getResponsiveValue(1),
             textAlign: 'center',
             color: StyleConfig.PopupFront,
@@ -65,7 +54,6 @@ function setStyle() {
             borderColor: StyleConfig.PopupFront,
             borderWidth: getResponsiveValue(1)
         },
-
         marginLeft: {
             marginLeft: getResponsiveValue(1),
         },
@@ -126,7 +114,6 @@ export default class NumberChange extends Component {
     }
 
     addNumber() {
-
         let newNumber = this.state.Number + 1;
         this.setState({ Number: newNumber });
         if (this.props.onNumberChange) {
@@ -134,7 +121,6 @@ export default class NumberChange extends Component {
         }
     }
     reduceNumber() {
-
         if (this.state.Number > 1) {
             let newNumber = this.state.Number - 1;
             this.setState({ Number: newNumber });
@@ -148,23 +134,16 @@ export default class NumberChange extends Component {
         }
     }
 
-
-
     render() {
         setStyle();
         return (
-            <View style={[(this.propStyle != null) ? this.propStyle : pageStyles.baseView]}
-
-            >
+            <View style={[(this.propStyle != null) ? this.propStyle : pageStyles.baseView]}>
                 <TouchableOpacity
-
                     ref={(add) => {
                         if (typeof this.props.addlayout === 'function')
                             this.props.addlayout(add)
                     }}
                     style={pageStyles.decreaseOrReduce} onPress={() => { this.reduceNumber() }} >
-                    {/* <Text style={pageStyles.tempText}>-</Text> */}
-
                     <SvgUri width={getResponsiveValue(20)} height={getResponsiveValue(20)} fill={StyleConfig.PopupFront} source="reduce" />
                 </TouchableOpacity>
                 <View style={{ width: getResponsiveValue(2) }}></View>
@@ -180,18 +159,9 @@ export default class NumberChange extends Component {
                             this.props.reducelayout(reduce)
                     }}
                     style={pageStyles.addOrReduce} onPress={() => { this.addNumber() }} >
-                    {/* <Text style={[pageStyles.tempText, , pageStyles.marginLeft]}>+</Text> */}
-
                     <SvgUri width={getResponsiveValue(20)} height={getResponsiveValue(20)} fill={StyleConfig.PopupFront} source="add2" />
                 </TouchableOpacity>
             </View>
         );
     }
-
-
 }
-
-
-
-
-

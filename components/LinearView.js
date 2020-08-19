@@ -63,27 +63,6 @@ export class Linear extends BaseComponent {
 	render() {
 		return (
 			<View><Text>修改加载效果</Text></View>
-			// <Svg
-			// 	style={[StyleSheet.absoluteFill]}>
-			// 	<Defs>
-			// 		<LinearGradient id="grad">
-			// 			{this.colors.map((c, i)=> {
-			// 				return (
-			// 					<Stop key={i} {...c}/>
-			// 				);
-			// 			})}
-			// 		</LinearGradient>
-			// 	</Defs>
-			// 	<Rect
-			// 		x="0"
-			// 		y="0"
-			// 		rx={this.props.borderRadius}
-			// 		ry={this.props.borderRadius}
-			// 		width={this.props.width}
-			// 		height={this.props.height}
-			// 		fill="url(#grad)"
-			// 	/>
-			// </Svg>
 		);
 	}
 }

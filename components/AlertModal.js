@@ -1,43 +1,40 @@
 import React from 'react';
-// import PropTypes from "prop-types";
-import { View, Text, Dimensions, Modal, StyleSheet, TouchableOpacity, Animated, Vibration, Easing, InteractionManager } from 'react-native';
+import { View, Text, Dimensions, Modal, TouchableOpacity } from 'react-native';
 import { getResponsiveValue, getResponsiveFontSize } from '../assets/default.theme';
 
 
 let _alertmodal;
 export function showModal(
-    title: String = "提示",
-    message: String = "这是一个alert",
-    content: Array = [
-        { text: 'ok', onPress: Function = () => { } }
-    ]
+  title: String = "提示",
+  message: String = "这是一个alert",
+  content: Array = [{ text: 'ok', onPress: Function = () => { } }]
 ) {
-    if (_alertmodal) {
-        let alert = new AlertModal()
-        _alertmodal(title, message, content);
-    }
+  if (_alertmodal) {
+    let alert = new AlertModal()
+    _alertmodal(title, message, content);
+  }
 }
 
 let { height, width } = Dimensions.get('window');
 export default class AlertModal extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showModal: false,
-            title: null,
-            message: null,
-            content: null
-        };
-        //  this._alertmodal = this._alertmodal.bind(this);
-        _alertmodal = (title: String = "提示", message: String = "这是一个alert", content: Array = [
-            { text: 'ok', onPress: Function = () => { } }
-        ]) => {
-            //this.setState({ showModal: true, title: title, message: message, content: content });
-            this.Show(title: String = "提示", message: String = "这是一个alert", content: Array = [
-                { text: 'ok', onPress: Function = () => { } }
-            ]);
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+      title: null,
+      message: null,
+      content: null
+    };
+    //  this._alertmodal = this._alertmodal.bind(this);
+    _alertmodal = (title: String = "提示", message: String = "这是一个alert", content: Array = [
+      { text: 'ok', onPress: Function = () => { } }
+    ]) => {
+      //this.setState({ showModal: true, title: title, message: message, content: content });
+      this.Show(title: String = "提示", message: String = "这是一个alert", content: Array = [
+          { text: 'ok', onPress: Function = () => { } }
+      ]);
     }
+  }
 
     Show(title: String = "提示", message: String = "这是一个alert", content: Array = [
         { text: 'ok', onPress: Function = () => { } }
@@ -203,68 +200,62 @@ export default class AlertModal extends React.Component {
 
 
     render() {
-        let self = this;
-        if (self.state.showModal) {
-            return (
-                // <View style={{
-                //     ...StyleSheet.absoluteFillObject,
-                //     backgroundColor: "#000000",
-                //     opacity: 0.7
-                // }}>
-                <Modal
-                    animationType={'fade'}
-                    visible={self.state.showModal}
-                    transparent={true}
-                    supportedOrientations={['portrait', 'landscape']}
-                    onRequestClose={() => {
-                        self.setState({ showModal: false });
-                    }}
-                >
-                    <View style={{ flex: 1, backgroundColor: '#000000b3' }}>
-                        <View style={{
-                            width: getResponsiveValue(468),
-                            height: getResponsiveValue(253),
-                            borderRadius: getResponsiveValue(20),
-                            backgroundColor: "#ffffff",
-                            shadowColor: "#0b11241a",
-                            alignSelf: 'center',
-                            flexDirection: 'column',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            marginTop: (height - getResponsiveValue(253)) / 2,
-                            //paddingTop: getResponsiveValue(30),
-                            elevation: 20,
-                            shadowOffset: {
-                                width: 0,
-                                height: getResponsiveValue(10)
-                            },
-                            shadowRadius: getResponsiveValue(80),
-                            shadowOpacity: getResponsiveValue(1)
-                        }}>
-                            <Text style={{
-                                fontSize: getResponsiveFontSize(37),
-                                color: "#3a3a3a",
-                                marginTop: getResponsiveValue(30),
+      let self = this;
+      if (self.state.showModal) {
+          return (
+              <Modal
+                  animationType={'fade'}
+                  visible={self.state.showModal}
+                  transparent={true}
+                  supportedOrientations={['portrait', 'landscape']}
+                  onRequestClose={() => {
+                      self.setState({ showModal: false });
+                  }}
+              >
+                  <View style={{ flex: 1, backgroundColor: '#000000b3' }}>
+                      <View style={{
+                          width: getResponsiveValue(468),
+                          height: getResponsiveValue(253),
+                          borderRadius: getResponsiveValue(20),
+                          backgroundColor: "#ffffff",
+                          shadowColor: "#0b11241a",
+                          alignSelf: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          marginTop: (height - getResponsiveValue(253)) / 2,
+                          elevation: 20,
+                          shadowOffset: {
+                              width: 0,
+                              height: getResponsiveValue(10)
+                          },
+                          shadowRadius: getResponsiveValue(80),
+                          shadowOpacity: getResponsiveValue(1)
+                      }}>
+                          <Text style={{
+                              fontSize: getResponsiveFontSize(37),
+                              color: "#3a3a3a",
+                              marginTop: getResponsiveValue(30),
 
-                            }}>
-                                {self.state.title}
-                            </Text>
-                            <Text style={{
-                                width: getResponsiveValue(400),
-                                fontSize: getResponsiveFontSize(32),
-                                color: "#3a3a3a"
-                            }}>
-                                {self.state.message}
-                            </Text>
-                            <View style={{ flexDirection: 'row', }}>
-                                {self._rendermodel()}
-                            </View>
-                        </View>
-                    </View>
-                </Modal>
-                // </View>
-            );
-        }
-        return null;
-    }
+                          }}>
+                              {self.state.title}
+                          </Text>
+                          <Text style={{
+                              width: getResponsiveValue(400),
+                              fontSize: getResponsiveFontSize(32),
+                              color: "#3a3a3a"
+                          }}>
+                              {self.state.message}
+                          </Text>
+                          <View style={{ flexDirection: 'row', }}>
+                              {self._rendermodel()}
+                          </View>
+                      </View>
+                  </View>
+              </Modal>
+              // </View>
+          );
+      }
+      return null;
+  }
 }

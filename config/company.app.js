@@ -18,10 +18,6 @@ export const CompanyAppConfig =  Object.assign({
     CompanyBGImgWithLogo_Name:'',
     CompanyLogo_Name:'',
     LoginBGImg_Name:'',
-    // BaiduPushAPIKey: {
-    //     android: "config.BaiduPushAPIKey.android",
-    //     ios: "config.BaiduPushAPIKey.ios"
-    // },
     AppColor: {
         PageBackground: "#FFFFFF", // 整个页面背景色
         Main: "#4d5270", //背景：A3,// 主色 ：用于标题，导航栏背景
@@ -51,7 +47,5 @@ export const CompanyAppConfig =  Object.assign({
     LoginBGImg:{uri:"loginbgimg"},
     companySysNo: 1394
 }, config);
-// if u r testing or developing, this CompanyId is default;
-//CompanyAppConfig.CompanyID = '9ac9fe7e-dd4a-46f5-b124-7941f1744ae2';
 CompanyAppConfig.env='production';
 export default CompanyAppConfig;

@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
@@ -11,15 +11,9 @@ import {
 import PropTypes from "prop-types";
 import CompanyConfig from '../config/company.config.js';
 import AppConfig from '../config/app.config.js';
-// import { NavigationActions, StackNavigator } from 'react-navigation';
 import SvgUri from '../components/svguri.js';
 import { getResponsiveValue, getResponsiveFontSize, FontSize, Colors, BgColors } from "../assets/default.theme";
-// import appConfig from '../config/app.config.js';
-// import companyConfig from '../config/company.config.js';
 import { StyleConfig } from '../config/style.config.js';
-// const dismissKeyboard = require('dismissKeyboard');
-
-// const { UIManager } = NativeModules;
 //#region Styles
 let windowHeight = Dimensions.get('window').height;
 let windowWidth = Dimensions.get('window').width;

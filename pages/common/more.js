@@ -9,14 +9,13 @@ import {
   ImageBackground, Alert,
   ScrollView, TouchableHighlight, TouchableOpacity, NativeModules
 } from 'react-native';
-import AlertModal, { showModal } from "../../components/AlertModal";
-import { NavigationActions, NavigationState, NavigationRouter } from 'react-navigation';
+import { NavigationActions } from 'react-navigation';
 import CompanyConfig, { CompanyConfigHelper } from '../../config/company.config.js';
 import { getResponsiveValue, getResponsiveFontSize } from '../../assets/default.theme';
 import OperationMessage from '../../components/OperationMessage.js';
-import CustomHeader, { HeaderMenu } from '../../components/CustomHeader.js';
+import CustomHeader from '../../components/CustomHeader.js';
 import SvgUri from '../../components/svguri.js';
-import { getVersion, getSystemName } from 'react-native-device-info';
+import { getVersion } from 'react-native-device-info';
 import AppConfig, { clearStorage } from '../../config/app.config.js';
 import SalesService from '../../services/sales.js';
 import CustomerService from '../../services/myprofile';
@@ -363,7 +362,6 @@ export default class More extends Component {
     let version = getVersion();
     return (<ImageBackground style={moreStyles.bgimg} source={CompanyConfig.CompanyBGImg} >
       <OperationMessage ref="messageBar" />
-      <AlertModal ref={(al) => this.AlertModal = al} />
       <CustomHeader navigation={this.props.navigation} leftButtonOnPress={() => {
         if (typeof (this.props.navigation.state.params) != "undefined" && typeof (this.props.navigation.state.params.refresh == "function")) {
           this.props.navigation.state.params.refresh();

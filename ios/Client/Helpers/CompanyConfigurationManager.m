@@ -18,14 +18,14 @@ RCT_EXPORT_MODULE();
                    @"ios": @"0ckurEW8gbi9NVkmQP4u0MGz"
                },
                @"AppColor" : @{
-                   @"SecondaryFront" : @"#f5fbff",
-                   @"PopupBackground" : @"#2a2c3b",
-                   @"Secondary" : @"#6f7ead",
-                   @"DescriptionFront" : @"#a7aed1",
-                   @"ButtonBg" : @"#edf6ff",
-                   @"Main" : @"#ffffff",
-                   @"ContentFront" : @"#edf6ff",
-                   @"ButtonFront" : @"#014dc1"
+                   @"SecondaryFront" : @"#ffffff",
+                   @"PopupBackground" : @"#000000",
+                   @"Secondary" : @"#6b0025",
+                   @"DescriptionFront" : @"#A0A1A7",
+                   @"ButtonBg" : @"#4d5270",
+                   @"Main" : @"#ab021e",
+                   @"ContentFront" : @"#d10202",
+                   @"ButtonFront" : @"#FFFFFF"
                },
                @"AppStyle" : @"C"
         }

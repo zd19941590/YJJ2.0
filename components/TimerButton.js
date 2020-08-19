@@ -21,9 +21,6 @@ export default class TimerButton extends React.Component {
         timerTitle: PropTypes.string,
         enable: PropTypes.bool
     };
-
-
-
     InitAction() {
         const codeTime = this.state.timerCount;
         this.interval && clearInterval(this.interval);
@@ -74,7 +71,6 @@ export default class TimerButton extends React.Component {
         return (
             <TouchableOpacity activeOpacity={counting ? 1 : 0.8} onPress={() => {
                 if (!counting && enable && selfEnable) {
-                    //this.setState({ selfEnable: false })
                     this.props.onClick(this._shouldStartCountting)
                 };
             }}>

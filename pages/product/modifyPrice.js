@@ -351,14 +351,6 @@ export class CoefficientModifyPrice extends Component {
                     ],
                     { cancelable: false }
                 )
-                // this.AlertModal.Show(
-                //     '提示',
-                //     result.data.message,
-                //     [
-                //         { text: '确定', onPress: () => console.log(''), style: 'cancel' },
-                //     ],
-                //     { cancelable: false }
-                // );
             } else {
                 self.setState({
                     saveProductList: [],

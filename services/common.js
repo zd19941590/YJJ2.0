@@ -1,6 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import companyApp from '../config/company.app.js';
-import DataDownloadService from '../services/datadownload.js';
+
 export function formatMenu(menuList) {
     if (menuList == null || menuList.length == 0) return;
     for (let i = 0; i < menuList.length; i++) {

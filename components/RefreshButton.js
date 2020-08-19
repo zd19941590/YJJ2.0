@@ -81,16 +81,7 @@ export default class RefreshButton extends Component {
       }),
     ]).start();
     this.state.nu = this.state.nu + 1;
-    //  this.state.rotateZ = new Animated.Value(0);
   }
-
-  componentDidMount() {
-
-  }
-  componentWillUnmount() {
-
-  }
-
 
   render() {
     setStyle();
@@ -105,6 +96,4 @@ export default class RefreshButton extends Component {
       </View >
     )
   }
-
-
 }

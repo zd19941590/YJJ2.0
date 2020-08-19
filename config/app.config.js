@@ -69,8 +69,6 @@ delete envConfig["pre"];
 delete envConfig["production"];
 export default envConfig;
 
-
-
 export function clearStorage(shouldClearCompanyData: Boolean) {
 	global.storage.remove({ key: "DataDownloadAlert" });
 	global.storage.remove({ key: "Styles" });

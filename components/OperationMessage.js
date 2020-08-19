@@ -17,8 +17,6 @@ export function showMessage(message: String, messageType: Number) {
     }
 };
 
-
-
 export default class OperationMessage extends Component {
     static propTypes = {
         showMilliseconds: PropTypes.any,
@@ -95,12 +93,6 @@ export default class OperationMessage extends Component {
         let bg = null;
         let messageType = this.state.messageType;
         bg = msgStyles.successbg;
-        // let iconSource = require("../assets/icons/stop.png")
-        // if (messageType == 1) {
-        //     bg = msgStyles.successbg;
-        // }
-        // else 
-
         if (messageType == 2) {
             bg = msgStyles.errorbg;
         }
@@ -120,7 +112,6 @@ function setStyle() {
     if (msgStyles != null && !CompanyConfig.isGeneral()) return msgStyles;
     msgStyles = StyleSheet.create({
         msgbar: {
-            //flex: 1,
             flexDirection: "row",
             height: getResponsiveValue(0),
             width: getResponsiveValue(1334),

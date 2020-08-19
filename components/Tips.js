@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { View, Text, TouchableOpacity, Animated, Vibration, Easing, InteractionManager } from 'react-native';
+import { View, Text, Animated, Easing, InteractionManager } from 'react-native';
 import { getResponsiveValue, getResponsiveFontSize } from '../assets/default.theme';
-
-//let timeouts = [];
 
 export default class Tips extends React.Component {
     constructor(props) {
@@ -82,10 +80,8 @@ export default class Tips extends React.Component {
                     };
                 }
                 self._showAction();
-                //self.forceUpdate();
             })
         }
-
     };
 
     _hideAction() {
@@ -96,54 +92,29 @@ export default class Tips extends React.Component {
                 self.setState({ isShow: false });
                 self._nextime = 0;
             });
-            // self.timeouts.push(setTimeout(() => {
-            //     self.setState({ isShow: false });
-            //     self._nextime = 0;
-
-            // }, self.state.tipsTime / 50));//  self.state.tipsTime / 15
         }, self.state.tipsTime));
     }
     _showAction() {
         let self = this;
-        // if (timeouts.length > 0) {
-        //     timeouts.map(e => {
-        //         clearTimeout(e);
-        //     });
-        //     timeouts = [];
-        // };
         if (self._nextime !== 0) {
             return;
             if (self._nextime + self.state.tipsTime < Date.now()) {
-                //clearTimeout(timeouts[0]);
                 self.setState({ isShow: true });
                 self._hidefastAnimated();
-                //setTimeout(() => {
                 self._nextime = Date.now();
                 self.setState({ isShow: false });
                 self._showAnimated();
-                //}, 300);
-                // setTimeout(() => {
-                //     self.setState({ isShow: true });
-                // }, 300);
 
             } else {
-                //setTimeout(() => {
                 self.setState({ isShow: true });
                 self._nextime = Date.now();
                 self._showAnimated();
-                //}, 300);
             }
         } else if (self.tipsContent !== null && self.tipsContent !== "") {
             self.setState({ isShow: true });
             self._nextime = Date.now();
             self._showAnimated();
         }
-        // if (self.state.isShow) {
-        //     self._hidefastAnimated();
-        //     self._showAnimated();
-        // } else {
-        //     self._showAnimated();
-        // }
     }
     _hidefastAnimated() {
         let self = this;
@@ -181,8 +152,6 @@ export default class Tips extends React.Component {
         if (self.timeouts.length > 0) {
             self.timeouts.map((timeout) => clearTimeout(timeout));
         }
-    }
-    componentDidMount() {
     }
     _autorender() {
         let self = this;
