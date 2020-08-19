@@ -48,7 +48,6 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9B5E8B513CB83C4349848E4F /* libPods-YJJApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F297532A262F26C67D58C43 /* libPods-YJJApp.a */; };
 		BF1946672DDD423FBB57E126 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802488EAFA064DFC85C53D54 /* libRNDeviceInfo.a */; };
-		DA71A39920799D8B002D5A94 /* libRNReactNativeDocViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC5696620294018004C16C0 /* libRNReactNativeDocViewer.a */; };
 		DA8474BE206C8221001269F7 /* ap.py in Resources */ = {isa = PBXBuildFile; fileRef = DA847488206C8220001269F7 /* ap.py */; };
 		DA99D8EB205F54BD00E96981 /* CompanyConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA99D8EA205F54BD00E96981 /* CompanyConfigurationManager.m */; };
 		DAD03D1F2057B7FC0013BC9F /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD035132050D9D60013BC9F /* libCodePush.a */; };
@@ -509,13 +508,6 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNReactNativeDocViewer;
 		};
-		DAC5696520294018004C16C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAC5696120294018004C16C0 /* RNReactNativeDocViewer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNReactNativeDocViewer;
-		};
 		DAD035122050D9D60013BC9F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0F006A5E7A55433DA5AFDB8E /* CodePush.xcodeproj */;
@@ -610,7 +602,6 @@
 		DA847488206C8220001269F7 /* ap.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ap.py; sourceTree = "<group>"; };
 		DA99D8E9205F54BD00E96981 /* CompanyConfigurationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyConfigurationManager.h; sourceTree = "<group>"; };
 		DA99D8EA205F54BD00E96981 /* CompanyConfigurationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyConfigurationManager.m; sourceTree = "<group>"; };
-		DAC5696120294018004C16C0 /* RNReactNativeDocViewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNReactNativeDocViewer.xcodeproj; path = "../node_modules/react-native-doc-viewer/ios/RNReactNativeDocViewer.xcodeproj"; sourceTree = "<group>"; };
 		DAD03D212057B8210013BC9F /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD03D232057B87A0013BC9F /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD03D252057B8860013BC9F /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -678,7 +669,6 @@
 				DAFB5747207A1FDF00E0BA11 /* libcxxreact.a in Frameworks */,
 				DAFB5746207A1C9D00E0BA11 /* libART.a in Frameworks */,
 				DAFB57452079FA3900E0BA11 /* libRCTAnimation.a in Frameworks */,
-				DA71A39920799D8B002D5A94 /* libRNReactNativeDocViewer.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -1204,7 +1194,6 @@
 				557F0F44D601467A82B89825 /* RCTVideo.xcodeproj */,
 				FF26E45E00D64715921998F6 /* RCTBEEPickerManager.xcodeproj */,
 				E496BA887DA54621866A94C7 /* RNImagePicker.xcodeproj */,
-				DAC5696120294018004C16C0 /* RNReactNativeDocViewer.xcodeproj */,
 				0F006A5E7A55433DA5AFDB8E /* CodePush.xcodeproj */,
 			);
 			name = Libraries;
@@ -1270,14 +1259,6 @@
 			isa = PBXGroup;
 			children = (
 				DA71A39820799D7C002D5A94 /* libRNReactNativeDocViewer.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DAC5696220294018004C16C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DAC5696620294018004C16C0 /* libRNReactNativeDocViewer.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1518,10 +1499,6 @@
 				{
 					ProductGroup = 7A30F5E82005A89400C95DD9 /* Products */;
 					ProjectRef = E496BA887DA54621866A94C7 /* RNImagePicker.xcodeproj */;
-				},
-				{
-					ProductGroup = DAC5696220294018004C16C0 /* Products */;
-					ProjectRef = DAC5696120294018004C16C0 /* RNReactNativeDocViewer.xcodeproj */;
 				},
 				{
 					ProductGroup = DA71A39420799D7C002D5A94 /* Products */;
@@ -1962,13 +1939,6 @@
 			fileType = archive.ar;
 			path = libRNReactNativeDocViewer.a;
 			remoteRef = DA71A39720799D7C002D5A94 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAC5696620294018004C16C0 /* libRNReactNativeDocViewer.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNReactNativeDocViewer.a;
-			remoteRef = DAC5696520294018004C16C0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		DAD035132050D9D60013BC9F /* libCodePush.a */ = {
