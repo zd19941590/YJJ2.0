@@ -10,10 +10,9 @@ target 'YJJApp' do
     pod 'MBProgressHUD'
     pod 'SDWebImage', '4.4.2'
     pod 'UMCCommon'
-#    pod 'UMCAnalytics'
     pod 'UMCSecurityPlugins'
-  # pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  # pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  # pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 end
