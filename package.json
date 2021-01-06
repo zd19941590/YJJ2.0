@@ -10,7 +10,7 @@
 		"bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --assets-dest ./ios/bundle --bundle-output ./ios/main.jsbundle --dev false --entry-file index.js --platform ios"
 	},
 	"dependencies": {
-		"axios": "^0.16.2",
+		"axios": "^0.21.1",
 		"buffer": "^5.1.0",
 		"immutability-helper": "^2.5.0",
 		"moment": "^2.22.0",
